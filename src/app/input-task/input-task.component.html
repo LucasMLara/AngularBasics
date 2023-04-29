@@ -1,0 +1,14 @@
+<h2>Input Task</h2>
+<hr />
+<br />
+<label for="test">TASK: </label>
+<input class="form-control" type="text" id="test" [(ngModel)]="userName" />
+<p>{{ userName }}</p>
+
+<button
+  [disabled]="checkString()"
+  class="btn btn-primary"
+  (click)="resetInput()"
+>
+  Remove Existing Name
+</button>

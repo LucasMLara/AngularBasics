@@ -1,0 +1,29 @@
+<button (click)="displaySettings()" class="btn btn-info">
+  Display Settings
+</button>
+
+<h4 *ngIf="howManyTimesButtonWasClicked > 4">
+  Button was clicked more than 4 times!
+</h4>
+<h3
+  *ngIf="showSettingsOnScreen"
+  [ngStyle]="{ backgroundColor: changeStyle() ? 'blue' : '' }"
+  [ngClass]="{ showing: changeStyle() }"
+>
+  My First time doing something with Angular!
+</h3>
+<div
+  *ngFor="let logItem of log; let i = index"
+  [ngStyle]="{ backgroundColor: changeStyle(i) ? 'blue' : '' }"
+  [ngClass]="{ showing: changeStyle(i) }"
+>
+  {{ logItem }}
+</div>
+<!-- <h4 *ngIf="howManyTimesButtonWasClicked > 0">
+  Button was Clicked {{ howManyTimesButtonWasClicked }} times!
+</h4> -->
+
+<!-- adiciona botao com "display settings"
+adiciona um parágrafo que aparece condicionalmente com o click do botão
+'logar' os clicks de botao
+a partir  do quinto click, estilizar com fonte branca no bg class e background azul com ngstyle-->
